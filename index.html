@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repostería Dulce Delicia</title>
+    <link rel="stylesheet" href="style.css" type="text/css" >
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Bienvenidos a la Repostería Dulce Delicia</h1>
+        <p>Deliciosos postres para endulzar tus momentos especiales</p>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <a href="#productos">Productos</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <p><strong>Descubre nuestros deliciosos postres:</strong> pasteles, tartas, cupcakes y más, preparados con los mejores ingredientes.</p>
+            
+            <!-- Tabla de Productos con Imágenes Reales -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pastel de Chocolate</td>
+                        <td>Un delicioso pastel de chocolate cubierto con glaseado cremoso.</td>
+                        <td>$15.00</td>
+                        <td><img src="Imagenes/chocolate-cake-with-chocolate-sprinkles.jpg" alt="Pastel de Chocolate"></td>
+
+                    </tr>
+                    <tr>
+                        <td>Tarta de Fresa</td>
+                        <td>Fresca y deliciosa, ideal para cualquier ocasión especial.</td>
+                        <td>$12.00</td>
+                        <td><img  src="Imagenes/tart-with-strawberries-whipped-cream-decorated-with-mint-leaves.jpg" alt="Tarta de Fresa"></td>
+                    </tr>
+                    <tr>
+                        <td>Cupcakes de Vainilla</td>
+                        <td>Suaves y esponjosos cupcakes con un toque de vainilla.</td>
+                        <td>$2.50 cada uno</td>
+                        <td><img src="Imagenes/Cupcake.jpg" alt="Cupcakes de Vainilla"></td>
+                    </tr>
+                    <tr>
+                        <td>Galletas de Mantequilla</td>
+                        <td>Galletas caseras crujientes con un delicioso sabor a mantequilla.</td>
+                        <td>$5.00 la docena</td>
+                        <td><img src="Imagenes/Galletas.jpg" alt="Galletas de Mantequilla"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Categorías -->
+        <section id="categorias" class="categories">
+            <h2>Categorías de Productos</h2>
+            <ul>
+                <li><a href="#pasteles">Pasteles</a></li>
+                <li><a href="#tartas">Tartas</a></li>
+                <li><a href="#cupcakes">Cupcakes</a></li>
+                <li><a href="#galletas">Galletas</a></li>
+            </ul>
+        </section>
+
+        <!-- Formulario de Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna consulta o deseas realizar un pedido personalizado, ¡escríbenos!</p>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Repostería Dulce Delicia - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
