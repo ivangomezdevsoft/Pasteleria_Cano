@@ -1,58 +1,114 @@
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fdf0f6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ff69b4;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        nav {
-            background-color: #ffc0cb;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 10px;
-            color: #000;
-            text-decoration: none;
-        }
-        .container {
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #ff69b4;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 15px;
-            text-align: center;
-        }
-        th {
-            background-color: #ff69b4;
-            color: white;
-        }
-        img {
-            width: 150px;
-            height: auto;
-            border-radius: 8px;
-        }
-        footer {
-            background-color: #ffc0cb;
-            text-align: center;
-            padding: 1rem;
-            width: 100%;
-            margin-top: 20px; /* Añade margen para separarlo del contenido */
-        }
-    </style>
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf0f6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #ffc0cb;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.container {
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #ff69b4;
+}
+
+/* Estilos para las tarjetas de productos */
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.producto-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 40px); /* Cuatro tarjetas por fila */
+    transition: transform 0.3s;
+}
+
+.producto-card:hover {
+    transform: scale(1.05); /* Añade un ligero zoom al pasar el cursor */
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto-card h3 {
+    color: #ff69b4;
+    margin-top: 10px;
+}
+
+.producto-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.producto-card .precio {
+    font-weight: bold;
+    color: #ff69b4;
+    font-size: 1.2rem;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .producto-card {
+        width: calc(50% - 40px); /* Dos tarjetas por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .producto-card {
+        width: 100%; /* Una tarjeta por fila */
+    }
+}
+
+/* Otros estilos */
+footer {
+    background-color: #ffc0cb;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 20px; /* Añade margen para separarlo del contenido */
+}
+
+input[type="submit"] {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #e5507a;
+}
