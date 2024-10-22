@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repostería Dulce Delicia</title>
-    <link rel="stylesheet" href="style.css" type="text/css" >
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Para el icono del menú móvil -->
 </head>
 <body>
 
@@ -14,57 +15,79 @@
         <p>Deliciosos postres para endulzar tus momentos especiales</p>
     </header>
 
-    <!-- Barra de Navegación -->
+    <!-- Barra de Navegación mejorada -->
     <nav>
-        <a href="#productos">Productos</a>
-        <a href="#categorias">Categorías</a>
-        <a href="#contacto">Contacto</a>
+        <div class="logo">
+            <h2>Dulce Delicia</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="#productos" class="active">Productos</a></li>
+            <li><a href="#categorias">Categorías</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <!-- Botón de menú móvil -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
     <!-- Contenido Principal -->
     <div class="container">
+        <!-- Sección de Productos -->
         <section id="productos">
             <h2>Nuestros Productos</h2>
             <p><strong>Descubre nuestros deliciosos postres:</strong> pasteles, tartas, cupcakes y más, preparados con los mejores ingredientes.</p>
             
-            <!-- Tabla de Productos con Imágenes Reales -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Imagen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pastel de Chocolate</td>
-                        <td>Un delicioso pastel de chocolate cubierto con glaseado cremoso.</td>
-                        <td>$15.00</td>
-                        <td><img src="Imagenes/chocolate-cake-with-chocolate-sprinkles.jpg" alt="Pastel de Chocolate"></td>
+            <!-- Contenedor de productos en tarjetas -->
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <img src="Imagenes/chocolate-cake-with-chocolate-sprinkles.jpg" alt="Pastel de Chocolate">
+                    <h3>Pastel de Chocolate</h3>
+                    <p>Un delicioso pastel de chocolate cubierto con glaseado cremoso.</p>
+                    <p class="precio">$15.00</p>
+                    <!-- Botones -->
+                    <div class="botones">
+                        <button class="btn-detalles">Ver detalles</button>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
 
-                    </tr>
-                    <tr>
-                        <td>Tarta de Fresa</td>
-                        <td>Fresca y deliciosa, ideal para cualquier ocasión especial.</td>
-                        <td>$12.00</td>
-                        <td><img  src="Imagenes/tart-with-strawberries-whipped-cream-decorated-with-mint-leaves.jpg" alt="Tarta de Fresa"></td>
-                    </tr>
-                    <tr>
-                        <td>Cupcakes de Vainilla</td>
-                        <td>Suaves y esponjosos cupcakes con un toque de vainilla.</td>
-                        <td>$2.50 cada uno</td>
-                        <td><img src="Imagenes/Cupcake.jpg" alt="Cupcakes de Vainilla"></td>
-                    </tr>
-                    <tr>
-                        <td>Galletas de Mantequilla</td>
-                        <td>Galletas caseras crujientes con un delicioso sabor a mantequilla.</td>
-                        <td>$5.00 la docena</td>
-                        <td><img src="Imagenes/Galletas.jpg" alt="Galletas de Mantequilla"></td>
-                    </tr>
-                </tbody>
-            </table>
+                <div class="producto-card">
+                    <img src="Imagenes/tart-with-strawberries-whipped-cream-decorated-with-mint-leaves.jpg" alt="Tarta de Fresa">
+                    <h3>Tarta de Fresa</h3>
+                    <p>Fresca y deliciosa, ideal para cualquier ocasión especial.</p>
+                    <p class="precio">$12.00</p>
+                    <!-- Botones -->
+                    <div class="botones">
+                        <button class="btn-detalles">Ver detalles</button>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="Imagenes/Cupcake.jpg" alt="Cupcakes de Vainilla">
+                    <h3>Cupcakes de Vainilla</h3>
+                    <p>Suaves y esponjosos cupcakes con un toque de vainilla.</p>
+                    <p class="precio">$2.50 cada uno</p>
+                    <!-- Botones -->
+                    <div class="botones">
+                        <button class="btn-detalles">Ver detalles</button>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="Imagenes/Galletas.jpg" alt="Galletas de Mantequilla">
+                    <h3>Galletas de Mantequilla</h3>
+                    <p>Galletas caseras crujientes con un delicioso sabor a mantequilla.</p>
+                    <p class="precio">$5.00 la docena</p>
+                    <!-- Botones -->
+                    <div class="botones">
+                        <button class="btn-detalles">Ver detalles</button>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Categorías -->
@@ -78,18 +101,26 @@
             </ul>
         </section>
 
-        <!-- Formulario de Contacto -->
+        <!-- Formulario de Contacto mejorado -->
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Si tienes alguna consulta o deseas realizar un pedido personalizado, ¡escríbenos!</p>
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br><br>
-                <label for="email">Correo Electrónico:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
-                <input type="submit" value="Enviar">
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="btn-enviar">
+                </div>
             </form>
         </section>
     </div>
@@ -98,6 +129,16 @@
     <footer>
         <p>&copy; 2024 Repostería Dulce Delicia - Todos los derechos reservados</p>
     </footer>
+
+    <!-- JavaScript para menú móvil -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
