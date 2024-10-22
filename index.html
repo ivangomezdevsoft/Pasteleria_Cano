@@ -23,48 +23,41 @@
 
     <!-- Contenido Principal -->
     <div class="container">
+        <!-- Sección de Productos -->
         <section id="productos">
             <h2>Nuestros Productos</h2>
             <p><strong>Descubre nuestros deliciosos postres:</strong> pasteles, tartas, cupcakes y más, preparados con los mejores ingredientes.</p>
             
-            <!-- Tabla de Productos con Imágenes Reales -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Imagen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pastel de Chocolate</td>
-                        <td>Un delicioso pastel de chocolate cubierto con glaseado cremoso.</td>
-                        <td>$15.00</td>
-                        <td><img src="Imagenes/chocolate-cake-with-chocolate-sprinkles.jpg" alt="Pastel de Chocolate"></td>
+            <!-- Contenedor de productos en tarjetas -->
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <img src="Imagenes/chocolate-cake-with-chocolate-sprinkles.jpg" alt="Pastel de Chocolate">
+                    <h3>Pastel de Chocolate</h3>
+                    <p>Un delicioso pastel de chocolate cubierto con glaseado cremoso.</p>
+                    <p class="precio">$15.00</p>
+                </div>
 
-                    </tr>
-                    <tr>
-                        <td>Tarta de Fresa</td>
-                        <td>Fresca y deliciosa, ideal para cualquier ocasión especial.</td>
-                        <td>$12.00</td>
-                        <td><img  src="Imagenes/tart-with-strawberries-whipped-cream-decorated-with-mint-leaves.jpg" alt="Tarta de Fresa"></td>
-                    </tr>
-                    <tr>
-                        <td>Cupcakes de Vainilla</td>
-                        <td>Suaves y esponjosos cupcakes con un toque de vainilla.</td>
-                        <td>$2.50 cada uno</td>
-                        <td><img src="Imagenes/Cupcake.jpg" alt="Cupcakes de Vainilla"></td>
-                    </tr>
-                    <tr>
-                        <td>Galletas de Mantequilla</td>
-                        <td>Galletas caseras crujientes con un delicioso sabor a mantequilla.</td>
-                        <td>$5.00 la docena</td>
-                        <td><img src="Imagenes/Galletas.jpg" alt="Galletas de Mantequilla"></td>
-                    </tr>
-                </tbody>
-            </table>
+                <div class="producto-card">
+                    <img src="Imagenes/tart-with-strawberries-whipped-cream-decorated-with-mint-leaves.jpg" alt="Tarta de Fresa">
+                    <h3>Tarta de Fresa</h3>
+                    <p>Fresca y deliciosa, ideal para cualquier ocasión especial.</p>
+                    <p class="precio">$12.00</p>
+                </div>
+
+                <div class="producto-card">
+                    <img src="Imagenes/Cupcake.jpg" alt="Cupcakes de Vainilla">
+                    <h3>Cupcakes de Vainilla</h3>
+                    <p>Suaves y esponjosos cupcakes con un toque de vainilla.</p>
+                    <p class="precio">$2.50 cada uno</p>
+                </div>
+
+                <div class="producto-card">
+                    <img src="Imagenes/Galletas.jpg" alt="Galletas de Mantequilla">
+                    <h3>Galletas de Mantequilla</h3>
+                    <p>Galletas caseras crujientes con un delicioso sabor a mantequilla.</p>
+                    <p class="precio">$5.00 la docena</p>
+                </div>
+            </div>
         </section>
 
         <!-- Categorías -->
@@ -101,3 +94,4 @@
 
 </body>
 </html>
+
