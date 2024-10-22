@@ -1,58 +1,292 @@
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fdf0f6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ff69b4;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        nav {
-            background-color: #ffc0cb;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 10px;
-            color: #000;
-            text-decoration: none;
-        }
-        .container {
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #ff69b4;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 15px;
-            text-align: center;
-        }
-        th {
-            background-color: #ff69b4;
-            color: white;
-        }
-        img {
-            width: 150px;
-            height: auto;
-            border-radius: 8px;
-        }
-        footer {
-            background-color: #ffc0cb;
-            text-align: center;
-            padding: 1rem;
-            width: 100%;
-            margin-top: 20px; /* Añade margen para separarlo del contenido */
-        }
-    </style>
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf0f6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1, h2 {
+    color: #ff69b4;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #ffc0cb;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permitir que el menú se ajuste en varias líneas si es necesario */
+}
+
+nav .logo {
+    flex-grow: 1; /* El logo ocupa más espacio */
+    min-width: 200px; /* Asegurar que no se corte */
+    flex-shrink: 1; /* Permitir que el logo reduzca su tamaño si es necesario */
+}
+
+nav .logo h2 {
+    color: #ff69b4;
+    margin: 0;
+    font-size: 1.8rem; /* Mantener el tamaño adecuado para el logo */
+    white-space: nowrap; /* Evitar que el título se divida en varias líneas */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* El menú ocupa el espacio restante */
+    justify-content: flex-end; /* Alinear el menú a la derecha */
+    flex-shrink: 1; /* Permitir que el menú reduzca su tamaño */
+}
+
+nav ul li {
+    margin-left: 10px; /* Reducir márgenes */
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem; /* Reducir ligeramente el tamaño de fuente para el menú */
+    padding: 8px 12px; /* Reducir padding para ajustar mejor los elementos */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    background-color: #ff69b4;
+    color: white;
+}
+
+nav .menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+nav .menu-toggle i {
+    font-size: 1.5rem;
+    color: #ff69b4;
+}
+
+/* Menú responsivo para móviles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #ffc0cb;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 15px 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+/* Estilos para las tarjetas de productos */
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.producto-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 20px); /* Cuatro tarjetas por fila */
+    transition: transform 0.3s;
+}
+
+.producto-card:hover {
+    transform: scale(1.05); /* Añade un ligero zoom al pasar el cursor */
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto-card h3 {
+    color: #ff69b4;
+    margin-top: 10px;
+}
+
+.producto-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.producto-card .precio {
+    font-weight: bold;
+    color: #ff69b4;
+    font-size: 1.2rem;
+}
+
+/* Estilos para los botones */
+.botones {
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn-detalles {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.btn-detalles:hover {
+    background-color: #e5507a;
+}
+
+.btn-comprar {
+    background-color: #ffc0cb;
+    color: black;
+}
+
+.btn-comprar:hover {
+    background-color: #ff99c9;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .producto-card {
+        width: calc(50% - 20px); /* Dos tarjetas por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .producto-card {
+        width: 100%; /* Una tarjeta por fila */
+    }
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    color: #ff69b4;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #ff69b4;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn-enviar {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.contact-form .btn-enviar:hover {
+    background-color: #e5507a;
+}
+
+/* Añadir margen entre el formulario y otras secciones */
+#contacto {
+    margin-top: 40px;
+}
+
+/* Otros estilos */
+footer {
+    background-color: #ffc0cb;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 20px;
+}
