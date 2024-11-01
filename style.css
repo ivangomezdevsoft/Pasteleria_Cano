@@ -33,7 +33,7 @@ h1, h2 {
     color: #ff69b4;
 }
 
-/* Estilos para las tarjetas de productos */
+/* Estilos para productos */
 .productos-grid {
     display: flex;
     flex-wrap: wrap;
@@ -48,12 +48,12 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    width: calc(25% - 40px); /* Cuatro tarjetas por fila */
+    width: calc(25% - 40px);
     transition: transform 0.3s;
 }
 
 .producto-card:hover {
-    transform: scale(1.05); /* Añade un ligero zoom al pasar el cursor */
+    transform: scale(1.05);
 }
 
 .producto-card img {
@@ -67,48 +67,124 @@ h1, h2 {
     margin-top: 10px;
 }
 
-.producto-card p {
-    margin: 10px 0;
-    color: #555;
-}
-
 .producto-card .precio {
     font-weight: bold;
     color: #ff69b4;
     font-size: 1.2rem;
 }
 
-/* Responsividad para dispositivos móviles */
-@media (max-width: 768px) {
-    .producto-card {
-        width: calc(50% - 40px); /* Dos tarjetas por fila */
-    }
+.btn-agregar-carrito,
+#finalizar-compra {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-@media (max-width: 480px) {
-    .producto-card {
-        width: 100%; /* Una tarjeta por fila */
-    }
+#finalizar-compra:hover,
+.btn-agregar-carrito:hover {
+    background-color: #e5507a;
 }
 
-/* Otros estilos */
-footer {
-    background-color: #ffc0cb;
+/* Estilo de tarjeta para el formulario de contacto */
+.contact-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contacto p {
+    color: #555;
+    font-size: 1rem;
     text-align: center;
-    padding: 1rem;
-    width: 100%;
-    margin-top: 20px; /* Añade margen para separarlo del contenido */
+    margin-bottom: 20px;
 }
 
-input[type="submit"] {
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card label {
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.contact-card input[type="text"],
+.contact-card input[type="email"],
+.contact-card textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.contact-card input[type="text"]:focus,
+.contact-card input[type="email"]:focus,
+.contact-card textarea:focus {
+    border-color: #ff69b4;
+    outline: none;
+}
+
+.contact-card textarea {
+    resize: vertical;
+}
+
+.contact-card input[type="submit"] {
     background-color: #ff69b4;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    max-width: 150px;
+    align-self: center;
 }
 
-input[type="submit"]:hover {
+.contact-card input[type="submit"]:hover {
     background-color: #e5507a;
+}
+
+/* Botones */
+.boton-volver {
+    background-color: #ffc0cb;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.boton-volver:hover {
+    background-color: #e0a3b3;
+}
+
+.boton-eliminar {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.boton-eliminar:hover {
+    background-color: #cc0000;
 }
