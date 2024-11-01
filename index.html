@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repostería Dulce Delicia</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Para el icono del menú móvil -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,20 +14,12 @@
         <p>Deliciosos postres para endulzar tus momentos especiales</p>
     </header>
 
-    <!-- Barra de Navegación mejorada -->
+    <!-- Barra de Navegación -->
     <nav>
-        <div class="logo">
-            <h2>Dulce Delicia</h2>
-        </div>
-        <ul class="menu">
-            <li><a href="#productos" class="active">Productos</a></li>
-            <li><a href="#categorias">Categorías</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <!-- Botón de menú móvil -->
-        <div class="menu-toggle" id="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
+        <a href="#productos">Productos</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#contacto">Contacto</a>
+        <a href="carrito.html" id="carrito-icono">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
     </nav>
 
     <!-- Contenido Principal -->
@@ -45,11 +36,7 @@
                     <h3>Pastel de Chocolate</h3>
                     <p>Un delicioso pastel de chocolate cubierto con glaseado cremoso.</p>
                     <p class="precio">$15.00</p>
-                    <!-- Botones -->
-                    <div class="botones">
-                        <button class="btn-detalles">Ver detalles</button>
-                        <button class="btn-comprar">Comprar</button>
-                    </div>
+                    <button class="btn-agregar-carrito" data-nombre="Pastel de Chocolate" data-precio="15.00">Agregar al Carrito</button>
                 </div>
 
                 <div class="producto-card">
@@ -57,11 +44,7 @@
                     <h3>Tarta de Fresa</h3>
                     <p>Fresca y deliciosa, ideal para cualquier ocasión especial.</p>
                     <p class="precio">$12.00</p>
-                    <!-- Botones -->
-                    <div class="botones">
-                        <button class="btn-detalles">Ver detalles</button>
-                        <button class="btn-comprar">Comprar</button>
-                    </div>
+                    <button class="btn-agregar-carrito" data-nombre="Tarta de Fresa" data-precio="12.00">Agregar al Carrito</button>
                 </div>
 
                 <div class="producto-card">
@@ -69,11 +52,7 @@
                     <h3>Cupcakes de Vainilla</h3>
                     <p>Suaves y esponjosos cupcakes con un toque de vainilla.</p>
                     <p class="precio">$2.50 cada uno</p>
-                    <!-- Botones -->
-                    <div class="botones">
-                        <button class="btn-detalles">Ver detalles</button>
-                        <button class="btn-comprar">Comprar</button>
-                    </div>
+                    <button class="btn-agregar-carrito" data-nombre="Cupcakes de Vainilla" data-precio="2.50">Agregar al Carrito</button>
                 </div>
 
                 <div class="producto-card">
@@ -81,64 +60,29 @@
                     <h3>Galletas de Mantequilla</h3>
                     <p>Galletas caseras crujientes con un delicioso sabor a mantequilla.</p>
                     <p class="precio">$5.00 la docena</p>
-                    <!-- Botones -->
-                    <div class="botones">
-                        <button class="btn-detalles">Ver detalles</button>
-                        <button class="btn-comprar">Comprar</button>
-                    </div>
+                    <button class="btn-agregar-carrito" data-nombre="Galletas de Mantequilla" data-precio="5.00">Agregar al Carrito</button>
                 </div>
             </div>
         </section>
 
-        <!-- Categorías -->
-        <section id="categorias" class="categories">
-            <h2>Categorías de Productos</h2>
-            <ul>
-                <li><a href="#pasteles">Pasteles</a></li>
-                <li><a href="#tartas">Tartas</a></li>
-                <li><a href="#cupcakes">Cupcakes</a></li>
-                <li><a href="#galletas">Galletas</a></li>
-            </ul>
-        </section>
-
-        <!-- Formulario de Contacto mejorado -->
+        <!-- Formulario de Contacto -->
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Si tienes alguna consulta o deseas realizar un pedido personalizado, ¡escríbenos!</p>
-            <form action="#" method="post" class="contact-form">
-                <div class="form-group">
+            <div class="contact-card">
+                <form action="#" method="post">
                     <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="form-group">
+                    <input type="text" id="nombre" name="nombre" required><br><br>
                     <label for="email">Correo Electrónico:</label><br>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
+                    <input type="email" id="email" name="email" required><br><br>
                     <label for="mensaje">Mensaje:</label><br>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Enviar" class="btn-enviar">
-                </div>
-            </form>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
         </section>
     </div>
 
-    <!-- Pie de Página -->
-    <footer>
-        <p>&copy; 2024 Repostería Dulce Delicia - Todos los derechos reservados</p>
-    </footer>
-
-    <!-- JavaScript para menú móvil -->
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const nav = document.querySelector('nav');
-
-        menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
